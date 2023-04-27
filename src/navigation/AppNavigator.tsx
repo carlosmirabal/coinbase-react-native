@@ -10,6 +10,17 @@ import Prices from "../screens/Prices";
 import Settings from "../screens/Settings";
 import TabBar from "../components/TabBar";
 
+const HomeStackNavigator = createNativeStackNavigator();
+
+const HomeNavigator = () => {
+    return (
+        <HomeStackNavigator.Navigator>
+            <HomeStackNavigator.Screen name="Home" component={Home} />
+            <HomeStackNavigator.Screen name="News" component={News} />
+        </HomeStackNavigator.Navigator>
+    );
+};
+
 const TabBarNavigator = createBottomTabNavigator();
 
 const TabNavigator = () => {
